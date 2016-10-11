@@ -1,4 +1,10 @@
 require 'ap'
+require_relative "slam.rb"
+
+a = [nil, 2, 2, 2]
+p a
+slam(a, 0, 1, 0)
+p a
 
 a = [
   ['00', '01', '02', '03'],
