@@ -1,12 +1,5 @@
-# a = [8, 8, 2, 8]
 a = [nil, 2, 2, 2]
-p a
-# i = 3.times { |i|
-# 	a[i] = "#{i}:cats"
-# 	break 42 if i == 1
-# }
 def process(array, i, j, counter)
-  # if (i...array.length).select { |i| !array[i].nil? }.empty?
   if counter > array.length
     p "hit base"
     p "i:#{i};j#{j};array[i]:#{array[i]};j#{j};array:#{array}; counter:#{counter}"
@@ -23,9 +16,6 @@ def process(array, i, j, counter)
   puts "="*20
   puts "*"*20
   puts "="*20
-  # array[start...array.length].each.with_index do |array[i], i|
-  # for i in (start...array.length)
-  # for j in (i+1...array.length)
   puts "$"*20
   p "i:#{i};j#{j};array[i]:#{array[i]};j#{j};array:#{array}; counter:#{counter}"
   if array[i].nil?
@@ -49,7 +39,7 @@ def process(array, i, j, counter)
     p "#{array[i]} != nil"
     p "i:#{i};j#{j};array[i]:#{array[i]};j#{j};array:#{array}; counter:#{counter}"
     if array[j].nil?
-      # do nothing
+      # incremement j
       p "do nothing, inc j"
       p "nothing: #{array[i]} != nil; #{array[j]} == nil"
       counter += 1
@@ -68,13 +58,9 @@ def process(array, i, j, counter)
         process(array, i, i+1,counter)
       end
     end
-    #   end
-    # end
-    # puts "break"
-    # 42
-    p array
   end
 end
-puts "&"*20
+
 p a
-process(a,0,1,0)
+ap = process(a,0,1,0)
+p a
