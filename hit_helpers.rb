@@ -1,5 +1,9 @@
 # a = ["", "", "4", "4"]
 
+def hit array
+  array.map { |a| slide(merge(slide(a))) }
+end
+
 def slide array
   a = to_nums_and_nulls array
   a_compact = a.compact

@@ -4,19 +4,18 @@ require_relative "hit_helpers.rb"
 
 a = [
   ['2', '', '4', '4'],
-  ['2', '', '', ''],
-  ['', '', '', ''],
+  ['2', '', '16', '4'],
+  ['', '', '16', ''],
   ['', '', '4', ''],
 ]
-a_copy = a.map { |e| copy e }
+
+# 0 - left
+# 1 - down
+# 2 - right
+# 3 - up
+input = 1
 
 display a
-display a_copy
-
+a = rotate_90_n_times( hit( rotate_90_n_times( a,input )), 4-input)
 p "="*26
-
-a[0][0] = "cats"
-a_copy[0][0] = "dogs"
-
 display a
-display a_copy
