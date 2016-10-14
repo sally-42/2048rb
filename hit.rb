@@ -1,4 +1,4 @@
-a = ["2", "2", "", ""]
+a = ["2", "8", "", "8"]
 # a = [2, 2, nil, 2]
 
 def slide array
@@ -8,6 +8,19 @@ def slide array
 
   delta.times { a_compact << nil }
   a_compact.map(&:to_s)
+end
+
+def merge array
+  a = to_nums_and_nulls array
+  a.each_with_index do |val, i|
+    if a[i] && a[i] == a[i+1]
+      a[i] = 2*a[i]
+      a[i+1] = nil
+    else
+      # a[i] == nil
+    end
+  end
+  a.map(&:to_s)
 end
 
 def to_nums_and_nulls array
@@ -23,6 +36,7 @@ end
 p a
 p slide a
 p a
+p merge(slide a)
 # p to_strings a
 p a
 p to_nums_and_nulls a
