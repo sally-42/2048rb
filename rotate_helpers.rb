@@ -16,7 +16,7 @@ def rotate_90(array)
 end
 
 # iterative
-def rotate_90x(array, n)
+def rotate_90_n_times(array, n)
   rotate_num = n % 4
   tmp_array = array
   rotate_num.times do
