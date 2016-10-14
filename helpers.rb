@@ -5,6 +5,7 @@
 #   ['30', '31', '32', '33'],
 # ]
 
+# todo: split up presentation, rotation, and hitting helpers
 def display(board)
   board.each do |row|
     row.each do |cell|
