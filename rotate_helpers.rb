@@ -1,10 +1,9 @@
-require 'presentation_helpers.rb'
-a = [
-  ['00', '01', '02', '03'],
-  ['10', '11', '12', '13'],
-  ['20', '21', '22', '23'],
-  ['30', '31', '32', '33'],
-]
+# a = [
+#   ['00', '01', '02', '03'],
+#   ['10', '11', '12', '13'],
+#   ['20', '21', '22', '23'],
+#   ['30', '31', '32', '33'],
+# ]
 
 def copy array
   array.map(&:clone)
@@ -17,7 +16,7 @@ def rotate_90(array)
 end
 
 # iterative
-def rotate_90xi(array, n)
+def rotate_90x(array, n)
   rotate_num = n % 4
   tmp_array = array
   rotate_num.times do

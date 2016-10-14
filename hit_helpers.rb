@@ -1,6 +1,4 @@
-a = ["", "", "4", "4"]
-# a = [2, 2, nil, 2]
-
+# a = ["", "", "4", "4"]
 
 def slide array
   a = to_nums_and_nulls array
@@ -31,6 +29,3 @@ def to_nums_and_nulls array
     end
   end
 end
-
-p a
-p slide(merge(slide(a)))
