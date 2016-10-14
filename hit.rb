@@ -1,9 +1,6 @@
-a = ["2", "2", "4", "2"]
+a = ["", "", "4", "4"]
 # a = [2, 2, nil, 2]
 
-def copy array
-  array.map(&:clone)
-end
 
 def slide array
   a = to_nums_and_nulls array
@@ -20,8 +17,6 @@ def merge array
     if a[i] && a[i] == a[i+1]
       a[i] = 2*a[i]
       a[i+1] = nil
-    else
-      # a[i] == nil
     end
   end
   a.map(&:to_s)
@@ -37,21 +32,5 @@ def to_nums_and_nulls array
   end
 end
 
-# p a
-# p slide a
-p "a",a
-# p slide(merge(slide a))
-b = copy a
-p "b",b
-b[0] = "cats"
-p "b",b
-p "a",a
-# p to_strings a
-# p a
-# p to_nums_and_nulls a
-# p a
-# p to_nums_and_nulls a_string #=> [2, 2, nil, 2]
-# a_clone = a.map(&:clone)
-
-# p a_clone
-# p a_clone.compact
+p a
+p slide(merge(slide(a)))
