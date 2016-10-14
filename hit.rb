@@ -1,6 +1,5 @@
-a = ["2", "8", "", "8"]
+a = ["2", "2", "4", "2"]
 # a = [2, 2, nil, 2]
-
 def slide array
   a = to_nums_and_nulls array
   a_compact = a.compact
@@ -33,14 +32,15 @@ def to_nums_and_nulls array
   end
 end
 
+# p a
+# p slide a
 p a
-p slide a
+p slide(merge(slide a))
 p a
-p merge(slide a)
 # p to_strings a
-p a
-p to_nums_and_nulls a
-p a
+# p a
+# p to_nums_and_nulls a
+# p a
 # p to_nums_and_nulls a_string #=> [2, 2, nil, 2]
 # a_clone = a.map(&:clone)
 
