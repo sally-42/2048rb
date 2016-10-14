@@ -1,7 +1,7 @@
 def display(board)
   board.each do |row|
     row.each do |cell|
-      if cell.nil?
+      if cell == ''
         print "*\t"
       else
         print "#{cell}\t"
