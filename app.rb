@@ -13,9 +13,26 @@ a = [
 # 1 - down
 # 2 - right
 # 3 - up
-input = 1
+input = ""
+key_codes = ['h', 'j', 'l', 'k']
+key_codes = {
+  'h' => 0,
+  'j' => 1,
+  'l' => 2,
+  'k' => 3,
+  'q' => 'q'
+}
 
-display a
-a = rotate_90_n_times( hit( rotate_90_n_times( a,input )), 4-input)
-p "="*26
-display a
+p num = key_codes['h']
+
+while input != 'q'
+  display a
+  puts "="*26
+  print "input:"
+  char_input = gets.chomp
+  input = key_codes[char_input]
+  a = rotate_90_n_times( \
+      hit( \
+      rotate_90_n_times( a,input )), 4-input) \
+      unless input == 'q'
+end
