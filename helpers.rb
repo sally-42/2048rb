@@ -25,12 +25,3 @@ def rotate_90xi(array, n)
   end
   tmp_array
 end
-
-# recursive
-def rotate_90x(array, n)
-  if n == 0
-    return array
-  else
-    rotate_90x(rotate_90(array), n-1)
-  end
-end
